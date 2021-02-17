@@ -28,13 +28,13 @@ const EditReview = ({reviews}) => {
         <summary>Edit Review</summary>
           Username: <input type="text" className="form-control" value={username} onChange={e => setUsername(e.target.value)} />
           <br />
-          Product Name: <input type="text" className="form-control" value={product_name} />
+          Product Name: <input type="text" className="form-control" value={product_name} onChange={e => setProduct_name(e.target.value)} />
           <br />
-          Product Image: <input type="text" className="form-control" value={product_image} />
+          Product Image: <input type="text" className="form-control" value={product_image} onChange={e => setProduct_image(e.target.value)} />
           <br />
-          Review: <textarea type="text" className="form-control" value={review}></textarea>
+          Review: <textarea type="text" className="form-control" value={review} onChange={e => setReview(e.target.value)}></textarea>
           <br />
-          <button type="button" class="btn btn-warning" onClick = {e => updateRevs(e)}>
+          <button type="button" className="btn btn-warning" onClick = {e => updateRevs(e)}>
             Edit
           </button>
       </details>

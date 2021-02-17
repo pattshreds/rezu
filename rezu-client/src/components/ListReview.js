@@ -23,7 +23,7 @@ const ListReview = () => {
     } catch (err) {
       console.error(err.message);
     }
-  }
+  } 
 
   useEffect(() => {
     getRevs()
@@ -36,14 +36,14 @@ const ListReview = () => {
         <div key={review.review_id}>
           <h3>
             {review.product_name}
-            <small class="text-muted">{review.username}</small>
+            <small className="text-muted">{review.username}</small>
           </h3> <br />
           <img height="150em" src={review.product_image} alt="product" /> <br />
           <p className="userreview">
             {review.review}
           </p>
           <EditReview reviews={reviews} />
-          <button class="btn btn-danger" onClick={() => deleteReview(review.review_id)}> Delete this review </button>
+          <button className="btn btn-danger" onClick={() => deleteReview(review.review_id)}> Delete this review </button>
           <br /><br />
 
         </div>

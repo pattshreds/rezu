@@ -31,12 +31,12 @@ const onSubmitForm = async (e) => {
     ======
       */}
 
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Share your experience!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="staticBackdropLabel">Share your experience!</h5>
+                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
 
       {/*
@@ -45,17 +45,17 @@ const onSubmitForm = async (e) => {
       =====
         */}
 
-        <div class="modal-body">
+        <div className="modal-body">
               <form onSubmit={onSubmitForm}>
-                Username: <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
+                Username: <input type="text" className="form-control" value={username} onChange={e => setUsername(e.target.value)} />
                 <br />
-                Product Name: <input type="text" value={product_name} onChange={e => setProduct_name(e.target.value)} />
+                Product Name: <input type="text" className="form-control" value={product_name} onChange={e => setProduct_name(e.target.value)} />
                 <br />
-                Product Image URL: <input type="text" value={product_image} onChange={e => setProduct_image(e.target.value)} />
+                Product Image URL: <input type="text" className="form-control" value={product_image} onChange={e => setProduct_image(e.target.value)} />
                 <br />
-                Review: <textarea value={review} onChange={e => setReview(e.target.value)}></textarea>
+                Review: <textarea value={review} className="form-control" onChange={e => setReview(e.target.value)}></textarea>
                 <br />
-                <button class="btn btn-info">Submit</button>
+                <button className="btn btn-info">Submit</button>
               </form>
 
             </div>
