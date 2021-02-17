@@ -1,22 +1,22 @@
 import React, {useState} from 'react'
 
-const EditReview = ({reviews}) => {
+  const EditReview = ({reviews}) => {
 
   const [username, setUsername] = useState(reviews.username)
-  const [product_name, setProduct_name] = useState(reviews.product_name)
-  const [product_image, setProduct_image] = useState(reviews.product_image)
-  const [review, setReview] = useState(reviews.review)
+  const [product_name, setProduct_name] = useState("")
+  const [product_image, setProduct_image] = useState("")
+  const [review, setReview] = useState("")
 
-  const updateRevs = async e => {
+  const updatedRev = async (e) => {
     e.preventDefault()
     try {
       const body = {username, product_name, product_image, review}
-      const response = await fetch(`http://localhost:3000/reviews/    ${reviews.review_id}`, {
+      const response = await fetch(`http://localhost:3000/reviews/${reviews.review_id}`, {
         method: "PUT",
-        headers: {"Content-Type": "application/json"},
+        headers: {"content-type": "application/json"},
         body: JSON.stringify(body)
       })
-        console.log(response);
+      console.log(response);
     } catch (err) {
       console.error(err.message);
     }
@@ -34,7 +34,7 @@ const EditReview = ({reviews}) => {
           <br />
           Review: <textarea type="text" className="form-control" value={review} onChange={e => setReview(e.target.value)}></textarea>
           <br />
-          <button type="button" className="btn btn-warning" onClick = {e => updateRevs(e)}>
+          <button type="button" className="btn btn-warning" onClick = {e => updatedRev(e)}>
             Edit
           </button>
       </details>

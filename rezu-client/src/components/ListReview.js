@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import EditReview from "./EditReview.js"
+import EditReview from "./EditReview"
 
 
 const ListReview = () => {
@@ -23,7 +23,7 @@ const ListReview = () => {
     } catch (err) {
       console.error(err.message);
     }
-  } 
+  }
 
   useEffect(() => {
     getRevs()
