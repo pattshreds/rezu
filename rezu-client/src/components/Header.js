@@ -22,7 +22,7 @@ const Header = () => {
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">Write a Review</a>
+          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Write a Review</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
