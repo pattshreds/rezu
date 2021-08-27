@@ -6,10 +6,9 @@ const ListReviews = () => {
 
     const deleteReview = async (id) => {
         try {
-            const deleteReview = await fetch(
-                `http://localhost:3000/reviews/${id}`,
-                { method: 'DELETE' }
-            );
+            await fetch(`http://localhost:3000/reviews/${id}`, {
+                method: 'DELETE',
+            });
             setReviews(reviews.filter((review) => review.review_id !== id));
         } catch (err) {
             console.error(err.message);
@@ -37,16 +36,16 @@ const ListReviews = () => {
                     <h3>
                         {review.product_name}
                         <small className='text-muted'>{review.username}</small>
-                    </h3>{' '}
+                    </h3>
                     <br />
                     <img
                         height='150em'
                         src={review.product_image}
                         alt='product'
-                    />{' '}
+                    />
                     <br />
                     <p className='userreview'>{review.review}</p>
-                    <EditReview reviews={reviews} />
+                    <EditReview review={review} />
                     <button
                         className='btn btn-danger'
                         onClick={() => deleteReview(review.review_id)}

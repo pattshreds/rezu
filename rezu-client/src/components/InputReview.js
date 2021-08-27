@@ -64,17 +64,17 @@ const InputReview = () => {
 
                         <div className='modal-body'>
                             <form onSubmit={onSubmitForm}>
-                                Username:{' '}
+                                Username:
                                 <input
                                     type='text'
                                     className='form-control'
                                     value={username}
-                                    onChange={(event) =>
-                                        setUsername(event.target.value)
+                                    onChange={(e) =>
+                                        setUsername(e.target.value)
                                     }
                                 />
                                 <br />
-                                Product Name:{' '}
+                                Product Name:
                                 <input
                                     type='text'
                                     className='form-control'
@@ -84,7 +84,7 @@ const InputReview = () => {
                                     }
                                 />
                                 <br />
-                                Product Image URL:{' '}
+                                Product Image URL:
                                 <input
                                     type='text'
                                     className='form-control'
@@ -94,7 +94,7 @@ const InputReview = () => {
                                     }
                                 />
                                 <br />
-                                Review:{' '}
+                                Review:
                                 <textarea
                                     value={review}
                                     className='form-control'

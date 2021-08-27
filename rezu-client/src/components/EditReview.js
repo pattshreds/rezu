@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-const EditReview = ({ reviews }) => {
-    const [username, setUsername] = useState(reviews.username);
-    const [product_name, setProductname] = useState(reviews.product_name);
-    const [product_image, setProductimage] = useState(reviews.product_image);
-    const [review, setReview] = useState(reviews.review);
+const EditReview = ({ review }) => {
+    const [username, setUsername] = useState(review.username);
+    const [product_name, setProductname] = useState(review.product_name);
+    const [product_image, setProductimage] = useState(review.product_image);
+    const [rev, setRev] = useState(review.review);
 
     const updatedRev = async (id) => {
-        const body = { username, product_name, product_image, review };
+        const body = { username, product_name, product_image, rev };
         await fetch(`http://localhost:3000/reviews/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
@@ -24,7 +24,7 @@ const EditReview = ({ reviews }) => {
                 <input
                     type='text'
                     className='form-control'
-                    value={reviews.username}
+                    value={username}
                     onChange={(event) => setUsername(event.target.value)}
                 />
                 <br />
@@ -48,14 +48,14 @@ const EditReview = ({ reviews }) => {
                 <textarea
                     type='text'
                     className='form-control'
-                    value={review}
-                    onChange={(event) => setReview(event.target.value)}
+                    value={rev}
+                    onChange={(event) => setRev(event.target.value)}
                 ></textarea>
                 <br />
                 <button
                     type='button'
                     className='btn btn-warning'
-                    onClick={() => updatedRev(reviews.review_id)}
+                    onClick={() => updatedRev(review.review_id)}
                 >
                     Edit
                 </button>
