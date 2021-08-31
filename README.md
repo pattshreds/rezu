@@ -4,4 +4,9 @@
 <hr> 
 The name Rezu comes from my idea of a "review zoo". This application will show honest reviews, from real people instead of reviews posted by bots, influencers, sponsored individuals, etc.
 <hr>
-<strong>* App is currently under construction and not working. I'll post the link here once it's up! * </strong>
+To-do List:
+<ul>
+  <li>Auth</li>
+  <li>Better styling</li>
+  <li>Product search function</li>
+  <li>More to come!</li>
