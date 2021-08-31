@@ -10,3 +10,4 @@ To-do List:
   <li>Better styling</li>
   <li>Product search function</li>
   <li>More to come!</li>
+ </ul> 
